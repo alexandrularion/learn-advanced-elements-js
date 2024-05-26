@@ -31,3 +31,13 @@ if (isCorrectPassword) {
     "The password should have at least 6 chars, one number, one sepcial symbol."
   );
 }
+
+/**
+ * Using the 'replace' method available in string object
+ */
+
+const cardNumber = "4012888888881881";
+const cardNumberRegex = /\d(?=\d{4})/g; // it matches the latest 4 digits
+const hashedCardNumber = cardNumber.replace(cardNumberRegex, "*"); // replace all but not the last 4 digits
+const formatedCardNumber = hashedCardNumber.match(/.{1,4}/g).join(" "); // go 4 by 4 and add a space between digits
+console.log(`Your card number: ${formatedCardNumber}`); // display the card number formated in terminal
