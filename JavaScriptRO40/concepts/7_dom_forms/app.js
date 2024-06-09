@@ -32,4 +32,7 @@ form.addEventListener("submit", (event) => {
       form.appendChild(paragraphElement);
     }
   }
+
+  // You can do an HTTP REQUEST to compare and loggin the user
+  // fetch('api.mydomain.com/api/login', { method: 'POST', body: { email: emailValue, password: passwordValue }})
 });
