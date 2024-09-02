@@ -1,9 +1,10 @@
 /**
  * Arrays: Using JS built-in features
  */
-
 const array = ["Apple", "Banana", "Cherry", "Peach", "Orange", "Watermelon"];
 console.log(array);
+
+console.log(array.length); // 6
 
 // 1. push() - Adds one or more elements to the END of the array
 array.push("Mango");
