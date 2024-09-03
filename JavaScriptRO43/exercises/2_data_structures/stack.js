@@ -12,6 +12,8 @@ function reverseString(str) {
   // Step 1: Push all characters of the string into the stack
   for (let char of str) {
     // TODO: Push `char` onto the stack
+    // ["h","e","l","l"","o"]
+    stack.push(char);
   }
 
   let reversedStr = "";
@@ -19,6 +21,9 @@ function reverseString(str) {
   // Step 2: Pop all characters from the stack and append them to reversedStr
   while (stack.length > 0) {
     // TODO: Pop from the stack and add to `reversedStr`
+    // stack.pop() -> o > l > l > e > h
+    reversedStr += stack.pop();
+    // reversedStr = olleh
   }
 
   return reversedStr;
