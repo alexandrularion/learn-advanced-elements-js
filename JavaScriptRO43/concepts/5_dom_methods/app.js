@@ -24,6 +24,7 @@ const buttonElement = document.createElement("button");
 // Add a text inside the <p /> tag
 messageElement.innerText = "Loading page...";
 
+// Add a text inside the <button /> tag
 buttonElement.innerText = "Save";
 
 // Find and select the <body /> tag
@@ -42,4 +43,8 @@ body.insertBefore(messageElement, paragraphs[1]);
 forms[0].removeChild(buttonElement);
 
 // Replace <p /> tag with <button /> tag within <body />
-body.replaceChild(buttonElement, messageElement);
+// body.replaceChild(buttonElement, messageElement);
+
+const messageSpanElement = document.createElement("span");
+messageSpanElement.innerText = "Page loaded.";
+messageElement.appendChild(messageSpanElement);

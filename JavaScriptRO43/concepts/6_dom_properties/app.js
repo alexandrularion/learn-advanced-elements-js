@@ -4,7 +4,7 @@ const container = document.querySelector(".container");
 // local JS object
 const user = {
   name: "John doe",
-  age: 20,
+  age: 24,
 };
 
 // Add raw HTML combined with JS data
@@ -37,4 +37,5 @@ if (user.age >= 20) {
   paragraph.style.color = "blue";
   paragraph.style.fontSize = "30px";
   paragraph.style.fontWeight = 700;
+  paragraph.style.alignItems = "center";
 }
