@@ -51,12 +51,12 @@ heading.addEventListener("mouseenter", (event) => {
   heading.style.transform = "scale(1.5) translateX(200px)";
 });
 
-// Triggered when the user unhover the heading element
-heading.addEventListener("mouseleave", handleMouseLeave);
-
 const handleMouseLeave = (event) => {
   console.log(event);
 
   heading.style.transform = "scale(1) translateX(0)";
   heading.removeEventListener("mouseleave", handleMouseLeave);
 };
+
+// Triggered when the user unhover the heading element
+heading.addEventListener("mouseleave", handleMouseLeave);

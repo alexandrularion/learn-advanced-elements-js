@@ -3,7 +3,9 @@ const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 
 console.log(form.children);
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
+  console.log(event);
+
   event.preventDefault();
 
   // Find and select the password paragraph error message if exists
@@ -34,5 +36,14 @@ form.addEventListener("submit", (event) => {
   }
 
   // You can do an HTTP REQUEST to compare and loggin the user
-  // fetch('api.mydomain.com/api/login', { method: 'POST', body: { email: emailValue, password: passwordValue }})
+  const response = await fetch("api.mydomain.com/api/login", {
+    method: "POST",
+    body: {
+      email: emailValue,
+      password: passwordValue,
+    },
+  });
+
+  const body = response.json();
+  console.log(body); // { jwtToken: "12938ansdbasvdo1237apsdlas6e1823iqbsd", message: "The user is logged in." }
 });
