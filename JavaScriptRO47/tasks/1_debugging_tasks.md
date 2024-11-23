@@ -71,6 +71,3 @@ console.log("Longest word:", result); // Expected: "jumps"
 - Test the function with punctuation marks in the sentence (e.g., "fox!").
 - Does splitting the string handle punctuation correctly?
 - Think about how you could sanitize the input before processing it.
-
----
-```
