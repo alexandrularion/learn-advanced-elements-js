@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+
+    <!-- CSS Styles -->
+    <style>
+      .edited {
+        border: 2px solid green;
+      }
+      .invalid {
+        border: 2px solid red;
+      }
+    </style>
+
+    <!-- Import JS -->
+    <script src="./index.js" defer async></script>
+  </head>
+  <body style="background: #fff">
+    <!-- Example of manipulating the dom with JS -->
+    <h1>Hello world</h1>
+
+    <!-- DOM Methods and Properties -->
+    <p id="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est deserunt
+      accusamus pariatur aspernatur eligendi dolore? Accusamus tempore quidem
+      molestiae perferendis doloremque quia, quas iusto et libero explicabo?
+      Reprehenderit, aliquam perspiciatis?
+    </p>
+    <img
+      alt="Profile Image"
+      style="transform: scale(1); transition: 0.2s ease-in-out"
+    />
+    <form>
+      <div>
+        <label for="name-input">Name</label>
+        <input
+          class="text-input"
+          id="name-input"
+          name="name"
+          placeholder="Enter your name"
+        />
+      </div>
+      <div>
+        <label for="email-input">Email</label>
+        <input
+          class="text-input"
+          id="email-input"
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+        />
+      </div>
+      <div>
+        <label for="biography-textarea">Biography</label>
+        <textarea
+          id="biography-textarea"
+          name="biography"
+          placeholder="Enter your biography"
+        ></textarea>
+      </div>
+      <div>
+        <label for="password-input">Password</label>
+        <input
+          id="password-input"
+          type="password"
+          name="password"
+          placeholder="Enter new password"
+        />
+        <button id="password-btn" type="button">Show password</button>
+      </div>
+    </form>
+  </body>
+</html>
