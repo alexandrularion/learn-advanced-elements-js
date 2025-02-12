@@ -127,3 +127,43 @@ console.log(isValidURL("http://www.test.org"));    // Expected: true
 console.log(isValidURL("www.missing-protocol.com"));// Expected: false
 console.log(isValidURL("random text"));            // Expected: false
 ```
+
+## **Task 6: Match a Hex Color Code**  
+**Task:** Write a regex that matches a **hexadecimal color code** (e.g., `#ff5733`, `#FFF`, `#123ABC`).  
+
+**Tips:**  
+✅ A hex color starts with `#`.  
+✅ It is followed by **either 3 or 6 hexadecimal characters** (`0-9`, `A-F`, `a-f`).  
+✅ The 3-character version (`#FFF`) is shorthand for the 6-character version (`#FFFFFF`).  
+
+### **Code Context (Without Solution)**  
+Imagine you're building a design tool where users can input custom colors. You need to validate whether they are entering a **valid hex color code**.  
+
+```js
+const colorCode = "#ff5733"; // Example user input
+const isValid = /* Your regex here */.test(colorCode);
+
+console.log(isValid); // Should print true for valid hex colors
+```
+
+---
+
+## **Task 7: Validate a U.S. Zip Code**  
+**Task:** Write a regex that validates **U.S. ZIP codes**, supporting both:  
+- **Standard 5-digit ZIP code** (e.g., `12345`)  
+- **ZIP+4 format** (e.g., `12345-6789`)  
+
+**Tips:**  
+✅ The standard ZIP code has **exactly 5 digits** (`0-9`).  
+✅ The ZIP+4 format includes a **hyphen followed by 4 digits** (`12345-6789`).  
+✅ The `-6789` part is **optional**.  
+
+### **Code Context (Without Solution)**  
+You're creating a checkout form where users must enter a **valid ZIP code** before proceeding with their order. Your form should accept **both 5-digit and ZIP+4 formats**.  
+
+```js
+const zipCode = "12345-6789"; // Example input
+const isValid = /* Your regex here */.test(zipCode);
+
+console.log(isValid); // Should print true for valid ZIP codes
+```
