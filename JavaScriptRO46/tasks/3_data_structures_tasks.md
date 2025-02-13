@@ -1,7 +1,3 @@
-Here are **10 beginner-friendly tasks** focusing on **arrays and objects**, with **MDN links** to relevant documentation.  
-
----
-
 ## **Array Tasks**  
 
 ### **Task 1: Get the First and Last Element of an Array**  
