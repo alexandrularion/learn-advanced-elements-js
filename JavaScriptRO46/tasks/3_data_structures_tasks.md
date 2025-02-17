@@ -132,3 +132,142 @@ const obj2 = { c: 3, d: 4 };
 const merged = mergeObjects(obj1, obj2);  
 console.log(merged); // Expected output: { a: 1, b: 2, c: 3, d: 4 }  
 ```
+
+## **Advanced Array Tasks**  
+
+### **Task 1: Remove Duplicates from an Array**  
+**Task:** Write a function that removes duplicate values from an array and returns a new array with unique elements.  
+
+🔗 **MDN Docs:** [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)  
+
+```js
+const numbers = [1, 2, 2, 3, 4, 4, 5];  
+const uniqueNumbers = removeDuplicates(numbers);  
+console.log(uniqueNumbers); // Expected output: [1, 2, 3, 4, 5]  
+```
+
+---
+
+### **Task 2: Find the Second Largest Number in an Array**  
+**Task:** Write a function that returns the second largest number in an array.  
+
+🔗 **MDN Docs:** [Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)  
+
+```js
+const numbers = [10, 5, 8, 12, 15, 3];  
+const secondLargest = getSecondLargest(numbers);  
+console.log(secondLargest); // Expected output: 12  
+```
+
+---
+
+### **Task 3: Flatten a Nested Array**  
+**Task:** Write a function that flattens a **nested** array into a single-level array.  
+
+🔗 **MDN Docs:** [Array.prototype.flat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)  
+
+```js
+const nestedArray = [1, [2, 3], [4, [5, 6]]];  
+const flatArray = flattenArray(nestedArray);  
+console.log(flatArray); // Expected output: [1, 2, 3, 4, 5, 6]  
+```
+
+---
+
+### **Task 4: Find Common Elements Between Two Arrays**  
+**Task:** Write a function that returns an array of elements **common** in two given arrays.  
+
+🔗 **MDN Docs:** [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)  
+
+```js
+const array1 = [1, 2, 3, 4, 5];  
+const array2 = [3, 4, 5, 6, 7];  
+const commonElements = findCommonElements(array1, array2);  
+console.log(commonElements); // Expected output: [3, 4, 5]  
+```
+
+---
+
+### **Task 5: Group Elements by Frequency**  
+**Task:** Write a function that counts how often each element appears in an array and returns an object with **element counts**.  
+
+🔗 **MDN Docs:** [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)  
+
+```js
+const data = ["apple", "banana", "apple", "orange", "banana", "apple"];  
+const frequency = countFrequency(data);  
+console.log(frequency);  
+// Expected output: { apple: 3, banana: 2, orange: 1 }  
+```
+
+---
+
+## **Advanced Object Tasks**  
+
+### **Task 6: Deep Merge Two Objects**  
+**Task:** Write a function that merges two objects **deeply**, meaning nested properties should also be merged.  
+
+🔗 **MDN Docs:** [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)  
+
+```js
+const obj1 = { a: 1, b: { c: 2, d: 3 } };  
+const obj2 = { b: { d: 4, e: 5 }, f: 6 };  
+const mergedObject = deepMerge(obj1, obj2);  
+console.log(mergedObject);  
+// Expected output: { a: 1, b: { c: 2, d: 4, e: 5 }, f: 6 }  
+```
+
+---
+
+### **Task 7: Convert an Object into a Query String**  
+**Task:** Write a function that converts an object into a query string format for a URL.  
+
+🔗 **MDN Docs:** [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams)  
+
+```js
+const params = { name: "Alice", age: 25, city: "Paris" };  
+const queryString = objectToQueryString(params);  
+console.log(queryString);  
+// Expected output: "name=Alice&age=25&city=Paris"  
+```
+
+---
+
+### **Task 8: Invert the Keys and Values of an Object**  
+**Task:** Write a function that **swaps** the keys and values of an object.  
+
+🔗 **MDN Docs:** [Object.entries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)  
+
+```js
+const person = { name: "Alice", age: 30 };  
+const inverted = invertObject(person);  
+console.log(inverted);  
+// Expected output: { Alice: "name", 30: "age" }  
+```
+
+---
+
+### **Task 9: Find the Most Frequent Key in an Object**  
+**Task:** Write a function that finds the key with the highest value in an object.  
+
+🔗 **MDN Docs:** [Object.values()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)  
+
+```js
+const votes = { apple: 5, banana: 3, orange: 8, pear: 2 };  
+const mostFrequent = findMostFrequentKey(votes);  
+console.log(mostFrequent); // Expected output: "orange"  
+```
+
+---
+
+### **Task 10: Check If Two Objects Are Deeply Equal**  
+**Task:** Write a function that checks if two objects are **deeply equal**, meaning they have the same structure and values.  
+
+🔗 **MDN Docs:** [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)  
+
+```js
+const obj1 = { a: 1, b: { c: 2 } };  
+const obj2 = { a: 1, b: { c: 2 } };  
+const isEqual = deepEqual(obj1, obj2);  
+console.log(isEqual); // Expected output: true  
+```
