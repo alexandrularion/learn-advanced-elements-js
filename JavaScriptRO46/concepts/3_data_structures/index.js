@@ -197,5 +197,31 @@ console.log(products[0]); // Output: {  id: 1, name: "Wireless Keyboard", catego
 products.forEach((element, index) => {
   // Tip: we can write our code  here
   // Tip: the code we write is valid for each step (iteration)
-  console.log(element, index); // Output: { id: ..., }, 1
+  console.log(element.name, index); // Output: { id: ..., }, 1
 });
+
+// Tip: We must always return the new element at every iteration (step)
+console.log(
+  products.map((product, index) => {
+    // Tip: We can write any code which will modify the original object
+    const formatedPrice = product.price.toLocaleString("ro", {
+      style: "currency",
+      currency: "USD",
+    });
+    // Tip: (...) Spread Operator is used most of the time on arrays and objects
+    return { ...product, formatedPrice: formatedPrice };
+  })
+);
+// ["Wireless Keyboard", "Gaming Mouse", "USB-C Charging Cable"...]
+
+console.log(
+  products.filter((product) => {
+    // Tip: We must always return the condition (true/false)
+    return product.category === "Electronics" && product.rating > 4.5;
+  })
+);
+
+// Tip:  productA - productB means that we sort in ascending order (from the lowest price to the highest)
+console.log(
+  products.sort((productA, productB) => productA.price - productB.price)
+);
