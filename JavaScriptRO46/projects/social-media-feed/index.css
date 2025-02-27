@@ -17,7 +17,8 @@ body {
 .container-posts {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
+  padding: 50px;
 }
 
 .container-posts__card {
@@ -31,6 +32,13 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.container-posts__card .card__header img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  object-fit: cover;
 }
 
 .container-posts__card .card__content {
