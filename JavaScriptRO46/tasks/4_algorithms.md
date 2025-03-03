@@ -1,7 +1,3 @@
-Here are 10 JavaScript algorithm examples formatted in Markdown, covering sorting, filtering, recursion, and execution time measurement.
-
----
-
 # 1. Bubble Sort  
 
 Sorts an array using the **Bubble Sort** algorithm.
@@ -215,7 +211,3 @@ console.log(binarySearch([1, 2, 3, 4, 5, 6], 4));
 
 **Input:** `[1, 2, 3, 4, 5, 6], 4`  
 **Output:** `3` (index of `4` in the array)  
-
----
-
-These examples demonstrate sorting, filtering, recursion, and measuring execution time in JavaScript. 🚀 Let me know if you need any refinements!
