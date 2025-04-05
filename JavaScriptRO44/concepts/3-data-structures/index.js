@@ -90,3 +90,49 @@ console.log(filteredUsers);
 // Tip: Filter the elements based on multiple values
 const filteredUsers2 = users.filter((user) => user.married && user.age > 45);
 console.log(filteredUsers2);
+
+// Tip: Map as a data structure
+const persons = new Map();
+
+// Tip: Use .set() method to add a new key-value pair
+persons.set(1, { name: "Jane Doe", id: 245566 });
+persons.set(2, { name: "John Doe", id: 339922 });
+
+// Tip: Use .get() method to retrieve information about a value within map
+console.log("Map -", persons.get(1)); // { name: "Jane Doe", id: 245566 }
+
+// Tip: Use .size property to get the current length of the object
+console.log("Map -", persons.size); // 2
+
+// Tip: Use .delete() method to remove any key-value pair from the map
+persons.delete(1);
+
+console.log("Map -", persons.size); // 1
+
+console.log(persons.get(1)); // undefined
+
+// Tip: Check if there is an element with the specified key
+console.log("Map -", persons.has(2)); // true
+console.log("Map -", persons.has(1)); // false
+
+// Tip: Iterate over all the key-value pairs
+persons.forEach((person, index) => {
+  console.log("Map -", person.name, index);
+});
+
+// Tip: Set as a data structure
+const uniquePersons = new Set();
+
+uniquePersons.add({ name: "Jane Doe", id: 245566 });
+uniquePersons.add({ name: "Jane Doe", id: 245566 });
+uniquePersons.add({ name: "John Doe", id: 339922 });
+
+// Tip: The objects have unique references and they can't be compared (deduplicated)
+console.log(uniquePersons);
+
+console.log(uniquePersons.size); // 3
+
+// Tip: Use clear() when you want to remove all the data
+uniquePersons.clear();
+
+console.log(uniquePersons); // Set(0) {}
