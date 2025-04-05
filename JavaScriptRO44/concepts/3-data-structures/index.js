@@ -73,3 +73,20 @@ console.log(users); // [...]
 
 // Tip: Remove the first element from the start of the array
 users.shift(); // [{ name: "Michael Johnson", age: 40, married: true, }]
+
+// Tip: Sort the elements in ascending order
+const ascendingSortedUsers = users.sort((a, b) => a.age - b.age);
+console.log(ascendingSortedUsers);
+
+// Tip: Sort the elements in descending order
+const descendingSortedUsers = users.sort((a, b) => b.age - a.age);
+console.log(descendingSortedUsers);
+
+// Tip: Filter the elements based on specific value
+const filteredUsers = users.filter((user) => user.married);
+// Falsy values: '', 0, null, undefined, false, NaN
+console.log(filteredUsers);
+
+// Tip: Filter the elements based on multiple values
+const filteredUsers2 = users.filter((user) => user.married && user.age > 45);
+console.log(filteredUsers2);
