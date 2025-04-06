@@ -93,3 +93,91 @@
 1. Use a nested loop for a brute-force approach.  
 2. Optimize with a `Set` or `Map` to store visited elements.  
 3. Handle duplicate pairs carefully to avoid repetition in the output.
+
+### 11. **Easy (Map): Create a Map from an Array of Key-Value Pairs**  
+**Task:** Write a function that creates a `Map` from an array of `[key, value]` pairs.
+
+**Tips:**  
+1. Use the `new Map()` constructor.  
+2. Ensure keys are unique; later entries will overwrite earlier ones with the same key.  
+
+---
+
+### 12. **Easy (Map): Retrieve a Value by Key**  
+**Task:** Write a function that takes a `Map` and a key, and returns the associated value.
+
+**Tips:**  
+1. Use the `.get()` method.  
+2. Handle cases where the key doesn't exist (e.g., return `undefined` or a custom message).
+
+---
+
+### 13. **Medium (Map): Count Character Frequency in a String**  
+**Task:** Write a function that counts how many times each character appears in a string using a `Map`.
+
+**Tips:**  
+1. Loop through the string, updating the count in the `Map`.  
+2. Use `.has()` to check if the character already exists as a key.
+
+---
+
+### 14. **Medium (Map): Invert a Map (Swap Keys and Values)**  
+**Task:** Write a function that swaps the keys and values of a `Map`.
+
+**Tips:**  
+1. Be cautious if values are not unique—they’ll become the new keys.  
+2. Loop through the original map and set new pairs in a new `Map`.
+
+---
+
+### 15. **Advanced (Map): Merge Two Maps with Summed Values**  
+**Task:** Merge two maps. If the same key appears in both, sum their values.
+
+**Tips:**  
+1. Use a loop to iterate over both maps.  
+2. Use `.has()` and `.get()` to check and update values in the result map.
+
+---
+
+### 16. **Easy (Set): Remove Duplicates from an Array**  
+**Task:** Write a function that returns a new array with duplicates removed using a `Set`.
+
+**Tips:**  
+1. Use `new Set(array)` to remove duplicates.  
+2. Convert the set back to an array using `[...set]`.
+
+---
+
+### 17. **Easy (Set): Check if an Element Exists in a Set**  
+**Task:** Write a function that checks if a specific element exists in a `Set`.
+
+**Tips:**  
+1. Use the `.has()` method.  
+2. Sets are case-sensitive and use strict equality.
+
+---
+
+### 18. **Medium (Set): Find Intersection of Two Arrays**  
+**Task:** Write a function that returns a new array containing elements that exist in both input arrays using `Set`.
+
+**Tips:**  
+1. Convert one array to a `Set`.  
+2. Filter the other array to include only elements found in the `Set`.
+
+---
+
+### 19. **Medium (Set): Find the Difference Between Two Arrays**  
+**Task:** Return elements that exist in the first array but not in the second.
+
+**Tips:**  
+1. Use `Set` to store elements of the second array.  
+2. Filter the first array based on membership in the second set.
+
+---
+
+### 20. **Advanced (Set): Count Unique Values in a Nested Array**  
+**Task:** Write a function that counts how many unique values are in a nested array (e.g., `[[1, 2], [2, 3]]`).
+
+**Tips:**  
+1. Flatten the array using `.flat()` or manual iteration.  
+2. Use a `Set` to store unique values and get its size.
