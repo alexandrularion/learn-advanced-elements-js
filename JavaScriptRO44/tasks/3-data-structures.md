@@ -1,4 +1,4 @@
-# JavaScript Array Tasks
+# Data Structures Tasks
 
 ### 1. **Easy: Find the Length of an Array**  
 **Task:** Write a function that returns the length of a given array.  
