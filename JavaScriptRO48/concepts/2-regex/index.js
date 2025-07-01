@@ -26,3 +26,5 @@ const passwordSentence = "parolasecreta12*";
 
 const passwordResult = passwordRegex.test(passwordSentence);
 console.log("Password check: ", passwordResult); // false
+
+// 2. Find an replace based on a specific pattern
