@@ -1,21 +1,56 @@
-const products = [{ name: "Masina de spalat", price: 20 }];
+const products = [
+  {
+    // id: 100,
+    name: "Washing Machine",
+    price: 20,
+    category: {
+      id: 0,
+      name: "Electronics",
+    },
+  },
+];
 
 // Push
 // Appends new elements to the end of an array, and returns the new length of the array.
-products.push({ name: "Aspirator", price: 100 });
+products.push({
+  name: "Vacuum Cleaner",
+  price: 100,
+  category: {
+    id: 0,
+    name: "Electronics",
+  },
+});
 
 products.push(
   ...[
-    { name: "Frigider", price: 50 },
-    { name: "Espresor", price: 30 },
+    {
+      name: "Cup",
+      price: 50,
+      category: {
+        id: 1,
+        name: "Home",
+      },
+    },
+    {
+      name: "Forks",
+      price: 30,
+      category: {
+        id: 1, // id = identification
+        name: "Home",
+      },
+    },
   ]
 ); // More objects at the same time (... spread operator)
 
 // Unshit
 // Inserts new elements at the start of an array, and returns the new length of the array.
 products.unshift({
-  name: "Uscator de par",
+  name: "Chair",
   price: 15,
+  category: {
+    id: 1,
+    name: "Home",
+  },
 });
 
 console.log(products);
@@ -73,3 +108,45 @@ const product6 = { name: "Aspirator", price: 100 };
 
 // Wordpress (PHP)
 // 10E (100-500 utlizatori) - 120E / an
+
+// Direct access by index
+products[1]; // READ - { name: "Aspirator", price: 100 }
+
+// Map
+// Calls a defined callback function on each element of an array, and returns an array that contains the results.
+const newProducts = products.map((product) => {
+  // product starts from index 0 until products.length (eg. 10 - 12)
+  if (product.price >= 30) {
+    // ... - spread operator
+    // creating a new object containing current product object + new properties
+    return {
+      ...product, // not needed to construct the new object
+      isExpensive: true,
+    };
+  }
+
+  return {
+    ...product,
+    isExpensive: false,
+  };
+});
+
+console.log("new products", newProducts);
+
+// Filter
+// Returns the elements of an array that meet the condition specified in a callback function.
+const filteredProducts = products.filter((product) => {
+  return product.price >= 60 && [0, 3].includes(product.category.id); // boolean - true / false
+});
+
+// ternary operator
+// condition ? value1 : value2
+console.log("filtered products", filteredProducts);
+
+// Sort
+// Sorts an array in place. This method mutates the array and returns a reference to the same array.
+const sortedProducts = products.sort(
+  (productA, productB) => productB.price - productA.price
+);
+
+console.log("sorted products", sortedProducts);
