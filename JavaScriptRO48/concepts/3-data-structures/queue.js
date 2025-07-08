@@ -1,3 +1,4 @@
+// FIFO - First In First Out
 class QueueNode {
   constructor(value) {
     this.value = value;
@@ -5,7 +6,7 @@ class QueueNode {
   }
 }
 
-export class Queue {
+class Queue {
   constructor() {
     this.front = null;
     this.rear = null;
@@ -44,3 +45,13 @@ export class Queue {
     return this.length;
   }
 }
+
+const queue = new Queue();
+
+queue.enqueue("World");
+queue.enqueue("Hello");
+queue.enqueue("Programming");
+queue.dequeue("Hello");
+console.log(queue.isEmpty()); // false
+console.log(queue.peek());
+console.log(queue.size()); // 2

@@ -1,3 +1,4 @@
+// LIFO - Last In First Out
 class StackNode {
   constructor(value) {
     this.value = value;

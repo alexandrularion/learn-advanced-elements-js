@@ -1,11 +1,11 @@
-export class ListNode {
+class ListNode {
   constructor(value) {
     this.value = value;
     this.next = null;
   }
 }
 
-export class LinkedList {
+class LinkedList {
   constructor() {
     this.head = null;
     this.length = 0;
@@ -67,3 +67,16 @@ export class LinkedList {
     }
   }
 }
+
+const list = new LinkedList();
+
+list.append(2);
+list.append(4);
+list.append(1000);
+list.append(500);
+list.prepend(5);
+list.prepend(10);
+const element = list.find(2);
+console.log("element found: ", element);
+list.delete(5);
+list.print();
