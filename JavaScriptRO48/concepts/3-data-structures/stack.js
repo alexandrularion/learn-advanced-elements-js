@@ -6,7 +6,7 @@ class StackNode {
   }
 }
 
-export class Stack {
+class Stack {
   constructor() {
     this.top = null;
     this.length = 0;
@@ -39,3 +39,16 @@ export class Stack {
     return this.length;
   }
 }
+
+const stack = new Stack();
+
+stack.push("Hello");
+stack.push("World");
+
+console.log(stack);
+
+console.log(stack.pop()); // "World"
+
+console.log(stack.peek()); // "Hello"
+console.log(stack.size()); // 1
+console.log(stack.isEmpty()); // false
